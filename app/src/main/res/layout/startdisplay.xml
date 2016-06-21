@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_header_selector"
+    android:weightSum="1">
+
+    <ImageView
+        android:layout_width="153dp"
+        android:layout_height="168dp"
+        android:id="@+id/imageView"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:id="@+id/showError"
+        android:layout_gravity="center_horizontal"
+        android:layout_weight="0.51"
+        android:textColor="#ff0000"
+        android:textAlignment="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:textSize="24dp" />
+
+    <EditText
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:ems="10"
+        android:id="@+id/mailadress"
+        android:hint="Email"
+        android:drawableBottom="#ffffff"
+        android:layout_gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="314dp"
+        android:layout_height="wrap_content"
+        android:inputType="numberPassword"
+        android:ems="10"
+        android:id="@+id/password"
+        android:layout_gravity="center_horizontal"
+        android:hint="Passwort" />
+
+    <Button
+        android:layout_width="168dp"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:id="@+id/loginbutton"
+        android:textColor="#ffffff"
+        android:background="@drawable/mybutton"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

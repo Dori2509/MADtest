@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DoMyNote</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="Add_New">Neu...</string>
+    <string name="edit">Notiz bearbeiten</string>
+    <string name="delete">Notiz löschen</string>
+    <string name="title_activity_display_contact">DisplayNote</string>
+    <string name="name">Name</string>
+    <string name="description">Beschreibung</string>
+    <string name="time">Uhrzeit</string>
+    <string name="date">Fälligkeit</string>
+    <string name="save">Speichern</string>
+    <string name="deleteContact">Sind Sie sicher, dass Sie die Notiz löschen möchten?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="datum">Datum</string>
+</resources>

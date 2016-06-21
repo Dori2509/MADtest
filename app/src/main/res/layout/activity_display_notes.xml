@@ -1,0 +1,224 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_header_selector"
+    tools:context=".DisplayNote" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:text="Notiz"
+            android:textSize="20sp">
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/editTextTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextDate"
+            android:layout_below="@+id/editTextDate"
+            android:layout_marginTop="20dp"
+            android:hint="Klick hier..."
+            android:ems="10"
+            android:textSize="18sp" />
+
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editTextTime"
+            android:text="@string/time"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/ContactView"
+            android:text="Kontakt"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/ContactView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editTextDate"
+            android:layout_below="@+id/editTextTime"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Klick hier..."
+            android:textSize="18sp" />
+
+             <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editTextTime"
+            android:text="@string/date"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textStyle="bold"
+                 android:textSize="20sp" />
+
+            <TextView
+            android:id="@+id/editTextDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="120dp"
+            android:textSize="18sp"
+            android:ems="10"
+            android:inputType="text"
+            android:hint="Klick hier..."
+            android:layout_below="@+id/editTextDescription"
+            android:layout_alignRight="@+id/editTextDescription"
+            android:layout_alignEnd="@+id/editTextDescription">
+
+
+        </TextView>
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="120dp"
+            android:ems="10"
+            android:inputType="text"
+            android:layout_below="@+id/editTextNote"
+            android:layout_alignRight="@+id/editTextNote"
+            android:layout_alignEnd="@+id/editTextNote"
+            android:text="@string/description"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="false"
+            android:layout_alignParentBottom="false"
+            android:autoText="true" />
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="run"
+            android:text="@string/save"
+            android:layout_gravity="bottom"
+            android:layout_alignParentTop="true"
+            android:layout_alignRight="@+id/editTextDate"
+            android:layout_alignEnd="@+id/editTextDate" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/editTextDescription"
+            android:layout_marginTop="15dp"
+            android:layout_above="@+id/textView4"
+            android:layout_alignLeft="@+id/editTextDate"
+            android:layout_alignStart="@+id/editTextDate">
+
+            <RadioButton
+                android:layout_width="225dp"
+                android:layout_height="wrap_content"
+                android:text="normal"
+                android:checked="true"
+                android:id="@+id/radioButtonNormal"
+                android:textSize="18sp" />
+
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="hoch"
+                android:checked="false"
+                android:id="@+id/radioButtonHoch"
+                android:textSize="18sp" />
+
+        </RadioGroup>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:id="@+id/Image_Finished"
+            android:layout_gravity="right"
+            android:src="@drawable/no"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="30px"
+            android:layout_height="30px"
+            android:id="@+id/deleteContact"
+            android:layout_alignTop="@+id/textView5"
+            android:layout_toRightOf="@+id/ContactView"
+            android:layout_toEndOf="@+id/ContactView"
+            android:src="@drawable/delete" />
+
+        <ImageView
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:id="@+id/btn_sendSMS"
+            android:layout_below="@+id/textViewSMS"
+            android:layout_alignRight="@+id/deleteContact"
+            android:layout_alignEnd="@+id/deleteContact"
+            android:src="@drawable/sms" />
+        <ImageView
+            android:layout_width="90px"
+            android:layout_height="90px"
+            android:id="@+id/btn_sendMail"
+            android:src="@drawable/mail"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_alignStart="@+id/button1" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewMail"
+            android:layout_below="@+id/ContactView"
+            android:layout_alignLeft="@+id/ContactView"
+            android:layout_alignStart="@+id/ContactView"
+            android:hint=""
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/textViewSMS"
+            android:layout_marginTop="5dp"
+            android:hint=""
+            android:layout_below="@+id/textViewMail"
+            android:layout_alignLeft="@+id/textViewMail"
+            android:layout_alignStart="@+id/textViewMail"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/textViewImp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wichtigkeit"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_alignTop="@+id/radioGroup"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+</ScrollView>
